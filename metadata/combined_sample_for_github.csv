@@ -1,0 +1,70 @@
+ex,coll_num,name,new_ID,locality
+XZ005,CM Tribble 185,D_angelica_Hawaii_1,D_angelica,Kauai
+XZ007,CM Tribble NA,D_angelica_Hawaii_2,D_angelica,Kauai
+XZ037,A Vernon 81,D_angelica_Hawaii_3,D_angelica,Kauai
+XZ051,KR Wood 16584,D_angelica_Hawaii_4,D_angelica,Kauai
+XZ024,DD Palmer 1122,D_decipiens_Hawaii_1,D_decipiens,Oahu
+XZ033,H Oppenheimer 39902,D_decipiens_Hawaii_2,D_decipiens,Maui
+XZ034,DD Palmer 1086,D_decipiens_Hawaii_3,D_decipiens,Oahu
+XZ021,C Morden 1119,D_decipiens_Hawaii_4,D_subdecipiens,Hawai'i Island
+XZ041,DD Palmer 763,D_decipiens_Hawaii_5,D_subdecipiens,Oahu
+XZ045,DD Palmer 2863,D_decipiens_Hawaii_6,D_decipiens,Oahu
+XZ032,DD Palmer 1123,D_decipiens_Hawaii_7,D_decipiens,Oahu
+XZ012,S Perlman  20462,D_decipiens_Hawaii_8,D_decipiens,Maui
+XZ002,CM Tribble 135,D_decipiens_Hawaii_9,D_decipiens,Oahu
+XZ003,CM Tribble 143,D_decipiens_Hawaii_10,D_decipiens,Maui
+XZ009,KR Wood 12923,D_decipiens_Hawaii_11,D_subdecipiens,Kahoolawe
+XZ011,KR Wood 10713,D_decipiens_Hawaii_12,D_subdecipiens,Oahu
+XZ008,KR Wood 11555,D_decipiens_Hawaii_13,D_decipiens,Maui
+XZ055,KR Wood 17843,D_decipiens_Hawaii_14,D_decipiens,Kauai
+XZ043,DD Palmer 3110,D_decipiens_Hawaii_15,D_decipiens,Oahu
+XZ056,KR Wood 18265,D_decipiens_Hawaii_16,D_subdecipiens,Kauai
+XZ066,KR Wood 9071,D_decipiens_Hawaii_17,D_decipiens,Kauai
+XZ020,K Mehltreter 1402,D_decipiens_Hawaii_18,D_decipiens,Oahu
+XZ026,DD Palmer 764,D_decora_Hawaii_1,D_subdecipiens,Oahu
+XZ027,DD Palmer 585,D_decora_Hawaii_2,D_decora,Kauai
+XZ001,CM Tribble 180,D_decora_Hawaii_3,D_decora,Kauai
+XZ013,KR Wood 10715,D_decora_Hawaii_4,D_subdecipiens,Oahu
+XZ006,CM Tribble 189,D_decora_Hawaii_5,D_decora,Kauai
+XZ050,Flynn sn,D_decora_Hawaii_6,D_decora,Kauai
+XZ042,DD Palmer 584,D_decora_Hawaii_7,D_subdecipiens,Kauai
+XZ014,AR Smith 2921,D_decora_Hawaii_8,D_decora,Kauai
+XZ057,KR Wood 18028,D_decora_Hawaii_9,D_subdecipiens,Kauai
+XZ017,C Morden 2138,D_sp._Hawaii_1,D_decipiens,Maui
+XZ040,DD Palmer 2178,D_sp._Hawaii_2,D_angelica,Kauai
+XZ038,DD Palmer 597,D_subdecipiens_Hawaii_1,D_subdecipiens,Kauai
+XZ044,DD Palmer 3222,D_subdecipiens_Hawaii_2,D_subdecipiens,Oahu
+XZ054,KR Wood 17847,D_subdecipiens_Hawaii_3,D_decora,Kauai
+XZ053,KR Wood 15883,D_subdecipiens_Hawaii_4,D_decora,Kauai
+XZ068,KR Wood 3169,D_subdecipiens_Hawaii_5,D_subdecipiens,Oahu
+XZ036,DD Palmer 1081,D_takeuchii_Hawaii_1,D_takeuchii,Oahu
+XZ004,20200306SCH02,D_takeuchii_Hawaii_2,D_takeuchii,Oahu
+XZ071,Nitta 330,D_concolor_French_Polynesia_1,D_concolor,Moorea
+XZ069,Ranker 1939,D_concolor_French_Polynesia_2,D_concolor,Moorea
+XZ080,EM Zardini 37147,D_concolor_Paraguay,D_concolor,Guayaqui
+XZ075,Jansen-Jacobs 3561,D_concolor_Guyana,D_concolor,Rupununi
+XZ078,J Game 94/001,D_concolor_Cook_Islands,D_concolor,Rarotonga
+XZ072,Calatayud 4121,D_concolor_Peru_1,D_concolor,Cusco
+XZ062,E. Schuettpelz  1455,D_concolor_Brazil_1,D_concolor,Rio de Janeiro
+XZ079,A Bodenghien 2033,D_concolor_Congo,D_concolor,Piste Kolwezi-Mamf we
+XZ070,S Perlman  19746,D_concolor_French_Polynesia_3,D_concolor,Marquesas Islands
+XZ074,Meier 4355,D_concolor_Venezuela,D_concolor,Carabobo
+XZ052,KR Wood 10787,D_concolor_Marquesas,D_concolor,Ua Huka
+XZ073,Calatayud 2417,D_concolor_Peru_2,D_concolor,Cusco
+XZ077,JRI Wood 12276,D_concolor_Bolivia,D_concolor,Santa Cruz
+XZ058,E. Schuettpelz  1396,D_concolor_Brazil_2,D_concolor,Minas Gerais
+XZ049,LY Kuo 195,D_concolor_Taiwan,D_concolor,Taiwan
+XZ059,J. Prado 2126,D_lorentzii_Brazil,D_lorentzii,Sao Paulo
+XZ060,E. Schuettpelz 1454,D_varians_Brazil,D_varians,Rio de Janeiro
+XZ061,J. Prado 2135,L_crenulans_Brazil,L_crenulans,Santa Catarina
+XZ064,E. Schuettpelz  1374,O_gleichenioides_Brazil,O_gleichenioides,Minas Gerais
+XZ063,E. Schuettpelz  1462,L_lomariacea_Brazil,L_lomariacea,Sao Paulo
+XZ048,E. Schuettpelz 1442,L_paradoxa_Brazil,L_paradoxa,Rio de Janeiro
+XZ065,E. Schuettpelz  1377,O_pinnata_Brazil,O_pinnata,Minas Gerais
+XZ047,P. Fischi 3898,L_quinquelobatum_Brazil,L_quinquelobatum,Rio de Janeiro
+XZ046,E. Schuettpelz 1387,O_riedelii_Brazil,O_riedelii,Minas Gerais
+XZ082,J. R. Abbot 16375,D_collina,D_collina,Bolivia
+XZ083,E. Barbosa 276,D_pentagona,D_pentagona,Parana
+XZ084,Mynssen CM 873,D_nobilis,D_cf_varians,Espirito Santo
+XZ085,UCBG 69.0032,D_elegans,D_nobilis,Brazil
+XZ086,UCBG9 7.0581,D_magestosa,D_patula,Brazil
