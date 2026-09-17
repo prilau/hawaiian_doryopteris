@@ -1,5 +1,4 @@
 # plot full astral tree
-setwd("~/Library/CloudStorage/Box-Box/carrie2018/project_Doryopteris/")
 library(ape)
 library(ggnewscale)
 library(ggtree)
@@ -52,7 +51,30 @@ dat$clade <- ifelse(dat$locality == "Kaua`i" |
                            ifelse(grepl("D.", dat$new_ID), "other dory", "not dory")))
 
 ##### read tree #####
-t <- read.tree("analyses/priscilla/astral/rooted_dory_BS10_BL1.tre")
+tree <- read.tree("output/dory_HI_BS10.tre")
+
+# reroot tree
+outgroup <- c("L_crenulans_Brazil",
+              "L_lomariacea_Brazil",
+              "O_gleichenioides_Brazil",
+              "O_pinnata_Brazil",
+              "O_riedelii_Brazil",
+              "L_quinquelobatum_Brazil",
+              "L_paradoxa_Brazil")
+
+outgroup <- outgroup[outgroup %in% tree$tip.label]
+if (length(outgroup) == 1) {
+  num <- which(tree$tip.label == outgroup)
+} else {
+  num <- getMRCA(tree, outgroup)
+}
+midpoint <- 0.5 * tree$edge.length[which(tree$edge[, 2] == num)]
+t <- phytools::reroot(tree, num, position = midpoint)
+
+# rescale tree height to 1
+t$edge.length <- t$edge.length / max(node.depth.edgelength(t))
+write.tree(t, file = "rooted_dory_BS10_BL1.tre")
+
 t <- drop.tip(t, tip="D_decipiens_Hawaii_17")
 
 # change/add locality to tip labels as well
@@ -117,5 +139,5 @@ t_plot <- ggtree(t_dat, aes(linetype = linetype, size = linewidth)) +
 
 t_plot
 
-ggsave("~/Desktop/supp_fig_astral2_tree_full.pdf", t_plot, width = 8, height = 10, units = "in")
+ggsave("~/figures/supp_fig_astral2_tree_full.pdf", t_plot, width = 8, height = 10, units = "in")
 

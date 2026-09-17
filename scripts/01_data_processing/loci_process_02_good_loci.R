@@ -1,4 +1,3 @@
-setwd("/Users/priscillalau/Box/project_Doryopteris/data/dory_combined/probe")
 
 # compare number of duplicated taxa by loci and by taxon
 library(ape)
@@ -23,11 +22,6 @@ for (i in 1:length(files_all)) {
 }
 
 # make data frame of taxon and number of seqs 
-
-#get_extr_num <- function(names) {
-#  n1 <- matrix(unlist(strsplit(names, split = "\\.")), ncol = 3, byrow = T)[,2]
-#  gsub("_sp", "", x = n1)
-#}
 get_extr_num <- function(names) {
   matrix(unlist(strsplit(names, split = "_")), ncol = 2, byrow = T)[,1]
 }
@@ -41,7 +35,7 @@ identify_dups <- function(tip, loci) {
   } else {return(NA)}
 }
 
-name_dict <- read.csv("../../../metadata/names_to_extr_num.csv")
+name_dict <- read.csv("metadata.csv")
 all_names <- name_dict$ex
 
 res <- as.data.frame(matrix(nrow = length(all_names), ncol = length(alns_all)))
@@ -81,7 +75,6 @@ for (i in 1:length(good_loci)) {
   file.copy(from = from, to = to)
 }
 
-
 files <- list.files(path = "good_loci/")
 files_all <- files[grep(".fasta", files)]
 
@@ -98,40 +91,21 @@ rename_alignment <- function(a, new_names) {
   return(a)
 }
 
-name_dict <- read.csv("~/Box/project_Doryopteris/metadata/names_to_extr_num.csv")
 
 for (i in 1:length(files_all)) {
   a <- ape::read.FASTA(files_all[i])
   a_renamed <- rename_alignment(a,name_dict)
   new_file <- strsplit(files_all[i],split = "\\.")[[1]][[1]]
-  ape::write.FASTA(a_renamed,file = paste0("~/Box/project_Doryopteris/data/dory_combined/probe/good_loci/good_loci_renamed/",new_file,".fasta"))
+  ape::write.FASTA(a_renamed,file = paste0("data/probe/good_loci/good_loci_renamed/", new_file,".fasta"))
 }
 
 
-
-
-
-##### identify good loci and concat nodups of 
-##### good loci for prelim analysis
-
-good_loci <- v_col[which(v_col <= 0.1)]
-#dir.create(paste0(file_path, "/good_loci"))
-loci_to_concat <- list() 
-for (i in 1:length(good_loci)) {
-  from = paste0("data/dory_combined/probe/nodups/",names(good_loci)[i],".nodups.fasta")
-  #to = paste0(file_path, "bad_loci/",names(good_loci)[i],".afterMerge.mafft.oneline.phy")
-  if (file.exists(from)) {
-    loci_to_concat[[i]] <- read.dna(from, format = "fasta") 
-  } else {loci_to_concat[[i]] <- NA}
-  #write.dna(f, to, format = "sequential")
-  #file.copy(from = from, to = to)
+### copy bad loci into a new directory for building gene trees
+bad_loci <- v_col[which(v_col > 0.1)]
+dir.create(paste0(file_path, "/bad_loci"))
+for (i in 1:length(bad_loci)) {
+  from = paste0(file_path,names(bad_loci)[i],".fasta")
+  to = paste0(file_path, "bad_loci/",names(bad_loci)[i],".phy")
+  f <- read.dna(from, format = "fasta")
+  write.dna(f, to, format = "sequential")
 }
-names(loci_to_concat) <- NULL
-loci_to_concat[[length(good_loci) + 1]] <- TRUE
-names(loci_to_concat)[length(good_loci) + 1] <- "check.names"
-loci_to_concat[[length(good_loci) + 2]] <- TRUE
-names(loci_to_concat)[length(good_loci) + 2] <- "fill.with.gaps"
-loci_to_concat <- loci_to_concat[!is.na(loci_to_concat)]
-concat <- do.call(cbind.DNAbin, loci_to_concat)
-write.dna(concat, file = "data/dory_combined/probe/nodups/concat.phy", format = "sequential")
-write.FASTA(concat, file = "data/dory_combined/probe/nodups/concat.fasta")
