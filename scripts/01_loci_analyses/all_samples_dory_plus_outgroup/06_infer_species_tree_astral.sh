@@ -3,7 +3,7 @@
 # make input file
 cat gt_output/*.tre > in.trees
 
-# OPTIONAL collapse low support branches in gene trees (need newick utils)
+# collapse low support branches in gene trees (need newick utils)
 nw_ed  in.trees 'i & b<=10' o > in_BS10.tre
 
 

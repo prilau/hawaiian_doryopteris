@@ -1,7 +1,9 @@
-
-# compare number of duplicated taxa by loci and by taxon
 library(ape)
 library(tidyverse)
+
+##########################################################
+# compare number of duplicated taxa by loci and by taxon
+##########################################################
 
 file_path <- "./"
 
