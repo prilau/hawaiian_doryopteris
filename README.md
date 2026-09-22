@@ -19,11 +19,10 @@
 
 ### Subset the alignments to include only Hawaiian _Doryopteris_ and _D. concolor_ samples
 <ol>
-    </li> Process alignments (`scripts/01_loci_analyses/subset_HI_plus_concolor/07_reduce_alignments.py`) </li>
-    </li> Infer locus trees using IQTREE and rename tip labels (`scripts/01_loci_analyses/subset_HI_plus_concolor/08_infer_gene_trees.sh` and `scripts/01_loci_analyses/subset_HI_plus_concolor/09_rename_tips_island.py`)</li>
-    </li> Prepare ASTRAL input (`scripts/01_loci_analyses/subset_HI_plus_concolor/10_prep_astral.sh`)) </li>
-    </li> Subset ASTRAL input to include/exclude _D. subdecipiens_ (`scripts/01_loci_analyses/subset_HI_plus_concolor/11_wastral_subset_to_vcf.py`)) </li>  
-    </li> Infer species tree using weighted ASTRAL (`scripts/02_analyses/12_infer_species_trees_wastral.sh`) </li>
+    <li> Process alignments: only keep a subset of samples from HI + outgroup, retaining or dropping D. subdecipiens depending on iteration. Drop samples represented in fewer than 50% of alignments. Re-align with mafft. (`scripts/01_loci_analyses/subset_HI_plus_concolor/07_reduce_alignments.py`) </li>
+    <li> Infer locus trees using IQTREE (`scripts/01_loci_analyses/subset_HI_plus_concolor/08_infer_gene_trees.sh`)</li>
+    <li> Prepare ASTRAL input (`scripts/01_loci_analyses/subset_HI_plus_concolor/10_prep_astral.sh`)) </li>
+    <li> Infer species tree using weighted ASTRAL and add island source to tip names (`scripts/02_analyses/12_infer_species_trees_wastral.sh` and `scripts/02_analyses/09_rename_tips_island.py`) </li>
 </ol>
 
 ## SNP analyses
